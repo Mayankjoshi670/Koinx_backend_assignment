@@ -33,4 +33,55 @@ This is the backend assignment for Koinx, which provides cryptocurrency statisti
 
 To start the project, run:
 ```sh
-npm run dev
+npm run dev  
+```
+
+
+## API Structure
+ ### Localhost API Endpoints
+ ` GET ` - Fetch Cryptocurrency Statistics
+URL: http://localhost:PORT_NO/api/v1/stats?coin=<coin_name>
+
+**Production URL:**  https://koinx-5d6u.onrender.com/api/v1/stats?coin=<coin_name>
+
+ ## Description:
+Fetch the current cryptocurrency statistics for the given coin.
+
+**Example Request:**
+
+
+``` 
+GET https://koinx-5d6u.onrender.com/api/v1/stats?coin=bitcoin
+
+```
+**Response:**
+
+```
+{
+	price: 40000,
+	marketCap: 800000000,
+	"24hChange": 3.4
+}
+```
+`` GET`` - Fetch Cryptocurrency Deviation
+URL: http://localhost:PORT_NO/api/v1/deviation?coin=<coin_name>
+
+**Production URL:** https://koinx-5d6u.onrender.com/api/v1/deviation?coin=<coin_name>
+
+## Description:
+Fetch the deviation of cryptocurrency price over the past 24 hours compared to the average price.
+
+**Example Request:**
+
+```
+GET https://koinx-5d6u.onrender.com/api/v1/deviation?coin=bitcoin
+```
+**Response:**
+
+ ```
+{
+	deviation: 4082.48
+}
+```
+
+
